@@ -52,5 +52,6 @@ reset.addEventListener('click',()=>{
     let boxtext = document.querySelectorAll('.boxtext');//querySelectorAll means select all character
     Array.from(boxtext).forEach(element=>{
         element.innerText="";
+        isgameover = false;
     })
 })
