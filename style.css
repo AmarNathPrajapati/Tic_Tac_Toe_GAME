@@ -1,0 +1,100 @@
+@font-face{
+    font-family: "rosemary";
+    src:url(Rosemary.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "rosemary";
+}
+li a {
+    text-decoration: none;
+    list-style: none;
+    color:white;
+    margin: 15px;
+}
+li{
+    background-color: rgb(136, 0, 199);
+    padding: 10px;
+}
+ul li a:hover{
+    color: black;
+}
+.line{
+    width: 0px;
+    transition:width 1s ease-in-out;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 4px;
+    border-radius: 20px;
+}
+.gameContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: grid;
+    grid-template-columns:repeat(3 , 15vw);
+    grid-template-rows:repeat(3 , 15vw);
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13vw;
+}
+.box:hover{
+    background-color: rgb(244, 194, 255);
+}
+.bb-0{
+    border-bottom: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.gameInfo{
+    text-align: center;
+}
+.info{
+    color: rgb(46, 2, 241);
+    font-size: 40px;
+    width: 250px;
+    margin: auto;
+
+}
+#reset{
+    cursor: pointer;
+    font-size: 35px;
+    width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgb(129, 188, 255);
+    color: black;
+}
+@media screen and (max-width:800px){
+    .gameContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container{
+        margin: 20px;
+        display: grid;
+        grid-template-columns:repeat(3 , 15vw);
+        grid-template-rows:repeat(3 , 15vw);
+    }
+    .box{
+        text-align: center;
+        font-size: 13vw;
+    }
+}
+

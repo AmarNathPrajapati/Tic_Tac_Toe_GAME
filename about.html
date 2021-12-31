@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+
+        }
+        li a {
+            text-decoration: none;
+            list-style: none;
+            color:white;
+            margin: 15px;
+        }
+        li{
+            background-color: rgb(136, 0, 199);
+            padding: 10px;
+        }
+        ul li a:hover{
+            color: black;
+        }
+        @font-face{
+            font-family: "rosemary";
+            src: url(Rosemary.ttf);
+        }
+        .container{
+            margin: 40px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            box-shadow: 15px 15px 12px rgb(36, 255, 226);
+            font-family: "rosemary";
+            font-size: 1.5em;
+        }
+        .btn{
+            font-family: "rosemary";
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid rgb(247, 0, 247);
+            border-radius: 1em;
+            font-size: 1.5em;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: rgb(47, 255, 127);
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <ul  id="nav">
+            <li>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <button class="btn" onclick="showDev()">About Developer</button>
+        <div class="devloper">
+            <p id="para1">You people know me very well, that's why I didn't mention anything about myself.</p>
+        </div>
+        <button class="btn" onclick="showGame()">About The Game</button>
+        <div class="game">
+            <p id = "para2">इस Game के बारे मे मैं क्या बताऊ!! आप सब के बचपन का Game है, आप सब इससे भली- भाति परिचित होंगे।।</p>
+        </div>
+        <button class="btn" onclick="showAim()">Aim</button>
+        <div id = "para3">
+            <ol>
+                <li>To save the Trees.</li>
+                <li>To save a lot of paper and ink. 😂😆🤣😆😂</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        let para1 = document.getElementById('para1');
+        para1.style.display="none";
+        function showDev(){
+            let para1 = document.getElementById('para1');
+            if(para1.style.display=="none"){
+                para1.style.display = "block";
+            }else{
+                para1.style.display = "none";
+            }
+        }
+        let para2 = document.getElementById('para2');
+        para2.style.display="none";
+        function showGame(){
+            let para2 = document.getElementById('para2');
+            if(para2.style.display=="none"){
+                para2.style.display = "block";
+            }else{
+                para2.style.display = "none";
+            }
+        }
+        let para3 = document.getElementById('para3');
+        para3.style.display="none";
+        function showAim(){
+            let para3 = document.getElementById('para3');
+            if(para3.style.display=="none"){
+                para3.style.display = "block";
+            }else{
+                para3.style.display = "none";
+            }
+        }
+        
+    </script>
+</body>
+</html>
