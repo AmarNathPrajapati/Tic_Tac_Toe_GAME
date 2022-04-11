@@ -2,6 +2,19 @@
     font-family: "rosemary";
     src:url(Rosemary.ttf);
 }
+.container1::before{
+    content: "";
+    background:url('games.jpg');
+    background-size:500px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 150px;
+    left: 145px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -23,8 +36,8 @@ ul li a:hover{
 .line{
     width: 0px;
     transition:width 1s ease-in-out;
-    height: 2px;
-    background-color:rgb(136, 0, 199);
+    height: 4px;
+    background-color: rgb(136, 0, 199);;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -97,4 +110,48 @@ ul li a:hover{
         font-size: 13vw;
     }
 }
-
+@media (min-width:200px) and (max-width:380px){
+    .container1::before{
+        content: "";
+        background:url('games.jpg');
+        background-size:200px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50px;
+        left: 75px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.25;
+    }
+}
+@media (min-width:380px) and (max-width:460px){
+    .container1::before{
+        content: "";
+        background:url('games.jpg');
+        background-size:300px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50px;
+        left: 75px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.25;
+    }
+}
+@media (min-width:460px) and (max-width:600px){
+    .container1::before{
+        content: "";
+        background:url('games.jpg');
+        background-size:350px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50px;
+        left: 75px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.25;
+    }
+}
