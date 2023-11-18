@@ -14,6 +14,7 @@ const changeTurn = () =>{
 const checkWin = () =>{
     let boxtext = document.getElementsByClassName('box');
     let wins = [
+        //index of box which satisfy the win condition.
         [0,1,2,3,7,0],
         [3,4,5,3,23,0],
         [6,7,8,3,38,0],
@@ -29,6 +30,16 @@ const checkWin = () =>{
                 document.querySelector('.info').innerText ="🥇"+boxtext[e[0]].innerText + "🥇WON";
                 document.querySelector('.line').style.width="40vw";
                 document.querySelector('.line').style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
+                if(isgameover==true){
+                    setTimeout(()=>{
+                        let boxtext = document.querySelectorAll('.boxtext');//querySelectorAll means select all character
+                        Array.from(boxtext).forEach(element=>{
+                            element.innerText="";
+                            isgameover=false;
+                            document.querySelector('.line').style.width="0vw";
+                        })
+                    },1500);
+                }
             }
     })
 }

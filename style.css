@@ -2,10 +2,13 @@
     font-family: "rosemary";
     src:url(Rosemary.ttf);
 }
+body{
+    overflow:hidden;
+}
 .container1::before{
     content: "";
     background:url('games.jpg');
-    background-size:500px;
+    background-size:50vw;
     background-repeat: no-repeat;
     position: absolute;
     top: 150px;
@@ -41,7 +44,6 @@ ul li a:hover{
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 4px;
     border-radius: 20px;
 }
 .gameContainer{
@@ -93,6 +95,16 @@ ul li a:hover{
     border-radius: 20px;
     background-color: rgb(129, 188, 255);
     color: black;
+}
+#reset:hover{
+    cursor: pointer;
+    font-size: 35px;
+    width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgb(139, 25, 238);
+    transition: all 1s linear;
+    color: white;
 }
 @media screen and (max-width:800px){
     .gameContainer{
